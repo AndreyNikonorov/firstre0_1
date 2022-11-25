@@ -1,10 +1,12 @@
-package jm.task.core.jdbc.model;
+package jm.core.jdbc.model;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Table
+@Entity
 public class User {
     @Id
     private int id;
@@ -22,7 +24,7 @@ public class User {
 
     }
 
-    public User(int id,String name, String lastName, Byte age) {
+    public User(String name, String lastName, Byte age) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;

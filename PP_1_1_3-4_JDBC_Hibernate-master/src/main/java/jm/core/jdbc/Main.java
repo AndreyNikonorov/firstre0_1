@@ -1,11 +1,6 @@
-package jm.task.core.jdbc;
+package jm.core.jdbc;
 
-import jm.task.core.jdbc.model.User;
-import jm.task.core.jdbc.service.UserServiceImpl;
-import org.postgresql.Driver;
-
-import java.util.ArrayList;
-import java.util.List;
+import jm.core.jdbc.service.UserServiceImpl;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,7 +20,7 @@ public class Main {
 //        userService.removeUserById(4);
 //        userService.removeUserById(12);
 //        userService.removeUserById(22);
-          userService.dropUsersTable();
+          userService.createUsersTable();
 
 
 

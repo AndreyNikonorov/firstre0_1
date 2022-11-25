@@ -1,9 +1,8 @@
-import jm.task.core.jdbc.model.User;
-import jm.task.core.jdbc.service.UserServiceImpl;
+import jm.core.jdbc.model.User;
+import jm.core.jdbc.service.UserServiceImpl;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.sql.SQLException;
 import java.util.List;
 
 
@@ -38,8 +37,8 @@ public class UserServiceTest {
     public void saveUserTest() {
 
         try {
-            userService.dropUsersTable();
-            userService.createUsersTable();
+//            userService.dropUsersTable();
+//            userService.createUsersTable();
             userService.saveUser(name, lastname, age);
             User user = userService.getAllUsers().get(0);
             if (!user.getName().equals(name) || !user.getLastName().equals(lastname)

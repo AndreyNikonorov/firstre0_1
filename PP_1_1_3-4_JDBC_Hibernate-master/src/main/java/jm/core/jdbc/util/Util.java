@@ -1,4 +1,4 @@
-package jm.task.core.jdbc.util;
+package jm.core.jdbc.util;
 
 import org.hibernate.engine.jdbc.spi.SqlExceptionHelper;
 
