@@ -30,8 +30,9 @@ public class HiberUtil {
             props.put("hibernate.connection.password", password);
             props.put("hibernate.hbm2ddl.auto", "create");
             props.put("spring.jpa.properties.hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
-            configuration.setProperties(props);
             configuration.addAnnotatedClass(User.class);
+            configuration.setProperties(props);
+
 
             ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                     .applySettings(configuration.getProperties()).build();

@@ -10,7 +10,7 @@ public class UserServiceTest {
     private final UserServiceImpl userService = new UserServiceImpl();
     private final String name = "tester";
     private final String lastname = "testerov";
-    private final byte age = 99;
+    private final byte age = 15;
 
 
     @Test
@@ -37,8 +37,8 @@ public class UserServiceTest {
     public void saveUserTest() {
 
         try {
-//            userService.dropUsersTable();
-//            userService.createUsersTable();
+            userService.dropUsersTable();
+            userService.createUsersTable();
             userService.saveUser(name, lastname, age);
             User user = userService.getAllUsers().get(0);
             if (!user.getName().equals(name) || !user.getLastName().equals(lastname)
@@ -60,7 +60,7 @@ public class UserServiceTest {
             userService.dropUsersTable();
             userService.createUsersTable();
             userService.saveUser(name,lastname,age);
-            userService.removeUserById(0);
+            userService.removeUserById(1);
 
         }catch(Exception e){
             Assert.fail("delete user failed");

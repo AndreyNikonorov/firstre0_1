@@ -1,7 +1,6 @@
 package jm.core.jdbc.service;
 
 import jm.core.jdbc.dao.UserDaoHibernateImpl;
-import jm.core.jdbc.dao.UserDaoJDBCImpl;
 import jm.core.jdbc.model.User;
 
 import java.util.List;
@@ -24,7 +23,7 @@ public class UserServiceImpl implements UserService {
 
     }
 
-    public void removeUserById(long id) {
+    public void removeUserById(int id) {
         userDaoJDBC.removeUserById(id);
     }
 
